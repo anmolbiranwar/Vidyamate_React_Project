@@ -7,31 +7,30 @@ const Login = () => {
     email: "",
     password: "",
   });
-  const [passwordVisible, setPasswordVisible] = useState(false);
-  const navigate = useNavigate();
+const navigate=useNavigate();
 
   function login() {
     console.log("login successfully");
   }
-
   function forgotPassword() {
     console.log("Forgot Password clicked");
   }
-
   const [msg, setMsg] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
       .post("https://api.vidyamate.in/MachineTest/user_login/", values)
-      .then((result) => {
-        if (result.data.msg === "login successfully.") {
-          console.log(result);
-          navigate("/dashboard");
-        } else {
-          setMsg("Wrong email or password");
-        }
-      })
+      .then((result) =>{
+      if(result.data.msg==='login successfully.')
+      {
+        console.log(result);
+        navigate('/dashboard')
+      }else{
+        setMsg("Invalid credentials");
+      }
+    }
+      )
       .catch((err) => setMsg(err.data.msg));
   };
 
@@ -57,23 +56,18 @@ const Login = () => {
 
           <div className="input-group mb-2">
             <input
-              type={passwordVisible ? "text" : "password"} // Toggle input type
+              type="password"
               name="password"
               autoComplete="off"
               placeholder="Enter Password"
-              value={values.password}
               onChange={(e) =>
                 setValues({ ...values, password: e.target.value })
               }
               className="form-control rounded"
             />
             <i
-              className={`input-group-text bi ${
-                passwordVisible ? "bi-eye-fill" : "bi-eye-slash-fill"
-              }`}
+              className="input-group-text bi bi-eye-slash-fill"
               id="togglePassword"
-              onClick={() => setPasswordVisible(!passwordVisible)}
-              style={{ cursor: "pointer" }}
             ></i>
           </div>
           <div className="mb-2">
