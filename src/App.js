@@ -8,7 +8,6 @@ import Login from './Components/Login';
 function App() {
   return (
    <>
-   Vidyamate
    <Login/>
    </>
   );
