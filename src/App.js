@@ -19,12 +19,20 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Login/>}/>
-      <Route path='/dashboard' element={<Dashboard/>} />
+      <Route path='/dashboard' element={<Dashboard />}>
+      <Route path='/dashboard/masters' element={<Masters/>} />
+      <Route path='/dashboard/organization' element={<Organization/>} />
+      <Route path='/dashboard/academicsession' element={<AcademicSession/>} />
+      <Route path='/dashboard/schoolregistration' element={<SchoolRegistration/>} />
+      <Route path='/dashboard/users' element={<Users/>} />
+      </Route>
+
+      {/* <Route path='/dashboard' element={<Dashboard/>} />
       <Route path='/masters' element={<Masters/>} />
       <Route path='/organization' element={<Organization/>} />
       <Route path='/academicsession' element={<AcademicSession/>} />
       <Route path='/schoolregistration' element={<SchoolRegistration/>} />
-      <Route path='/users' element={<Users/>} />
+      <Route path='/users' element={<Users/>} /> */}
 
 
 
