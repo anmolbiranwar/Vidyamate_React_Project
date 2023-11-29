@@ -11,6 +11,9 @@ import Organization from './Components/Organization';
 import AcademicSession from './Components/AcademicSession';
 import SchoolRegistration from './Components/SchoolRegistration';
 import Users from './Components/Users';
+import Home from './Components/Home';
+import SchoolList from './Components/SchoolList';
+import AddSchool from './Components/AddSchool';
 
 
 
@@ -20,12 +23,17 @@ function App() {
     <Routes>
       <Route path='/' element={<Login/>}/>
       <Route path='/dashboard' element={<Dashboard />}>
+      <Route path='' element={<Home />} />
       <Route path='/dashboard/masters' element={<Masters/>} />
       <Route path='/dashboard/organization' element={<Organization/>} />
       <Route path='/dashboard/academicsession' element={<AcademicSession/>} />
       <Route path='/dashboard/schoolregistration' element={<SchoolRegistration/>} />
+      <Route path='/dashboard/schoolregistration/schoollist' element={<SchoolList />}/>
+      <Route path='/dashboard/schoolregistration/addschool' element={<AddSchool/>}/>
+
       <Route path='/dashboard/users' element={<Users/>} />
       </Route>
+      
 
       {/* <Route path='/dashboard' element={<Dashboard/>} />
       <Route path='/masters' element={<Masters/>} />
