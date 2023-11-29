@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import './Dashboard.css'
 
 const Dashboard = () => {
@@ -17,22 +17,28 @@ const Dashboard = () => {
                             <Link to='/dashboard' className='nav-link text-white px-0 align-middle'><i className='fs-4 bi-speedometer2 ms-2'></i><span className='ms-2 d-none d-sm-inline'>Dashboard</span></Link>
                         </li>
                         <li className='w-100'>
-                            <Link to='/masters' className='nav-link text-white px-0 align-middle'><i className='fs-4 bi-people-fill ms-2'></i><span className='ms-2 d-none d-sm-inline'>Masters</span></Link>
+                            <Link to='/dashboard/masters' className='nav-link text-white px-0 align-middle'><i className='fs-4 bi-people-fill ms-2'></i><span className='ms-2 d-none d-sm-inline'>Masters</span></Link>
                         </li>
                         <li className='w-100'>
-                            <Link to='/organization' className='nav-link text-white px-0 align-middle'><i className='fs-4 bi-building-fill ms-2'></i><span className='ms-2 d-none d-sm-inline'>Organization</span></Link>
+                            <Link to='/dashboard/organization' className='nav-link text-white px-0 align-middle'><i className='fs-4 bi-building-fill ms-2'></i><span className='ms-2 d-none d-sm-inline'>Organization</span></Link>
                         </li>
                         <li className='w-100'>
-                            <Link to='/academicsession' className='nav-link text-white px-0 align-middle'><i className='fs-4 bi-calendar-check ms-2'></i><span className='ms-2 d-none d-sm-inline'>Academic Session</span></Link>
+                            <Link to='/dashboard/academicsession' className='nav-link text-white px-0 align-middle'><i className='fs-4 bi-calendar-check ms-2'></i><span className='ms-2 d-none d-sm-inline'>Academic Session</span></Link>
                         </li>
                         <li className='w-100'>
-                            <Link to='/schoolregistration' className='nav-link text-white px-0 align-middle'><i className='fs-4 bi-mortarboard-fill ms-2'></i><span className='ms-2 d-none d-sm-inline'>School Registration</span></Link>
+                            <Link to='/dashboard/schoolregistration' className='nav-link text-white px-0 align-middle'><i className='fs-4 bi-mortarboard-fill ms-2'></i><span className='ms-2 d-none d-sm-inline'>School Registration</span></Link>
                         </li>
                         <li className='w-100'>
-                            <Link to='/users' className='nav-link text-white px-0 align-middle'><i className='fs-4 bi-person-circle ms-2'></i><span className='ms-2 d-none d-sm-inline'>Users</span></Link>
+                            <Link to='/dashboard/users' className='nav-link text-white px-0 align-middle'><i className='fs-4 bi-person-circle ms-2'></i><span className='ms-2 d-none d-sm-inline'>Users</span></Link>
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div className='col p-0 m-0'>
+                <div className='p-2 d-flex justify-content-center shadow'>
+                    <h4>Vidyamate</h4>
+                </div>
+                <Outlet />
             </div>
         </div>
     </div>
