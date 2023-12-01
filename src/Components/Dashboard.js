@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
-import './Dashboard.css'
+import '../CSS/Dashboard.css'
 
 const Dashboard = () => {
   return (  
