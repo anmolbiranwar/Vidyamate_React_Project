@@ -14,7 +14,7 @@ import Users from './Components/Users';
 import Home from './Components/Home';
 import SchoolList from './Components/SchoolList';
 import AddSchool from './Components/AddSchool';
-
+import EditSchool from './Components/EditSchool';
 
 
 function App() {
@@ -30,20 +30,10 @@ function App() {
       <Route path='/dashboard/schoolregistration' element={<SchoolRegistration/>} />
       <Route path='/dashboard/schoolregistration/schoollist' element={<SchoolList />}/>
       <Route path='/dashboard/schoolregistration/addschool' element={<AddSchool/>}/>
+      <Route path='/dashboard/schoolregistration/editschool' element={<EditSchool />}/>
 
       <Route path='/dashboard/users' element={<Users/>} />
       </Route>
-      
-
-      {/* <Route path='/dashboard' element={<Dashboard/>} />
-      <Route path='/masters' element={<Masters/>} />
-      <Route path='/organization' element={<Organization/>} />
-      <Route path='/academicsession' element={<AcademicSession/>} />
-      <Route path='/schoolregistration' element={<SchoolRegistration/>} />
-      <Route path='/users' element={<Users/>} /> */}
-
-
-
     </Routes>
     </BrowserRouter>
    
