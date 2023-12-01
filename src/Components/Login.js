@@ -57,7 +57,7 @@ const Login = () => {
 
           <div className="input-group mb-2">
             <input
-              type={passwordVisible ? "text" : "password"} // Toggle input type
+              type={passwordVisible ? "text" : "password"} 
               name="password"
               autoComplete="off"
               placeholder="Enter Password"
