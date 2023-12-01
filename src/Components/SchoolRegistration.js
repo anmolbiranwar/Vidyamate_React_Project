@@ -11,17 +11,15 @@ const SchoolRegistration = () => {
       <div className='fw-bold'>School Registration</div>
       <div>
         <Link to='/dashboard/schoolregistration/schoollist' className={`text-decoration-none m-2 ${location.pathname === '/dashboard/schoolregistration/schoollist' ? 'text-blue' : 'text-black'}`}>
-          <span>School List</span>
+          <span className='fw-bold'>School List</span>
         </Link>
         <Link to='/dashboard/schoolregistration/addschool' className={`text-decoration-none m-3 ${location.pathname === '/dashboard/schoolregistration/addschool' ? 'text-blue' : 'text-black'}`}>
-          <span>Add School</span>
+          <span className='fw-bold'>Add School</span>
         </Link>
       </div>
     </div>
     <Outlet />
     </div>
-    
-   
       </>
   )
 }
