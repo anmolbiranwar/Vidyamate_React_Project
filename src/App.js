@@ -15,7 +15,10 @@ import Home from './Components/Home';
 import SchoolList from './Components/SchoolList';
 import AddSchool from './Components/AddSchool';
 import EditSchool from './Components/EditSchool';
-
+import BasicInfo from './Components/BasicInfo'; 
+import FeesHeads from './Components/FeesHeads';
+import ClassesSection from './Components/ClassesSection';
+import FeesStructure from './Components/FeesStructure';
 
 function App() {
   return (
@@ -29,9 +32,13 @@ function App() {
       <Route path='/dashboard/academicsession' element={<AcademicSession/>} />
       <Route path='/dashboard/schoolregistration' element={<SchoolRegistration/>} />
       <Route path='/dashboard/schoolregistration/schoollist' element={<SchoolList />}/>
+      <Route path='/dashboard/schoollist' element={<SchoolList/>}/>
       <Route path='/dashboard/schoolregistration/addschool' element={<AddSchool/>}/>
       <Route path='/dashboard/schoolregistration/editschool' element={<EditSchool />}/>
-
+      <Route path='/dashboard/schoolregistration/basicinfo' element={<BasicInfo />} />
+      <Route path='/dashboard/schoolregistration/feesheads' element={<FeesHeads />}/>
+      <Route path='/dashboard/schoolregistration/classessection' element={<ClassesSection/>}/>
+      <Route path='/dashboard/schoolregistration/feesstructure' element={<FeesStructure />}/>
       <Route path='/dashboard/users' element={<Users/>} />
       </Route>
     </Routes>
