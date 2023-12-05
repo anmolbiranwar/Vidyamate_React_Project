@@ -26,7 +26,7 @@ const Dashboard = () => {
                             <Link to='/dashboard/academicsession' className='nav-link text-white px-0 align-middle'><i className='fs-4 bi-calendar-check ms-2'></i><span className='ms-2 d-none d-sm-inline'>Academic Session</span></Link>
                         </li>
                         <li className='w-100'>
-                            <Link to='/dashboard/schoolregistration' className='nav-link text-white px-0 align-middle'><i className='fs-4 bi-mortarboard-fill ms-2'></i><span className='ms-2 d-none d-sm-inline'>School Registration</span></Link>
+                            <Link to='/dashboard/schoollist' className='nav-link text-white px-0 align-middle'><i className='fs-4 bi-mortarboard-fill ms-2'></i><span className='ms-2 d-none d-sm-inline'>School Registration</span></Link>
                         </li>
                         <li className='w-100'>
                             <Link to='/dashboard/users' className='nav-link text-white px-0 align-middle'><i className='fs-4 bi-person-circle ms-2'></i><span className='ms-2 d-none d-sm-inline'>Users</span></Link>
