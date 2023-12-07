@@ -2,3 +2,8 @@
     content:"*";
     color:red;
 }
+.navLink{
+    text-decoration: none;
+    text-align: start;
+    font-weight: 600;
+}
