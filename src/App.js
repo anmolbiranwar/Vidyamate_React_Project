@@ -34,7 +34,7 @@ function App() {
       <Route path='/dashboard/schoolregistration/schoollist' element={<SchoolList />}/>
       <Route path='/dashboard/schoollist' element={<SchoolList/>}/>
       <Route path='/dashboard/schoolregistration/addschool' element={<AddSchool/>}/>
-      <Route path='/dashboard/schoolregistration/editschool' element={<EditSchool />}/>
+      <Route path='/dashboard/schoolregistration/editschool/:schoolId' element={<EditSchool />}/>
       <Route path='/dashboard/schoolregistration/basicinfo' element={<BasicInfo />} />
       <Route path='/dashboard/schoolregistration/feesheads' element={<FeesHeads />}/>
       <Route path='/dashboard/schoolregistration/classessection' element={<ClassesSection/>}/>
