@@ -19,6 +19,23 @@ const SchoolList = () => {
   //   })
   // }
 
+  const handleDelete=(id)=>{
+    console.log(id);
+const confirmDelete=window.confirm("Would you like to Delete?");
+if(confirmDelete){
+  axios.post('https://api.vidyamate.in/MachineTest/delete_school_details/',{
+    school_id:id
+  })
+  .then(res=>{
+    window.location.reload()
+    setList(prevList => prevList.filter(item => item.id !== id));
+  })
+  .catch(err=>{
+    console.log(err);
+  })
+}
+  }
+
   function LoadSchool(){
     axios.get('https://api.vidyamate.in/MachineTest/get_school_designation_list/')
     .then(response=>{
@@ -30,7 +47,6 @@ const SchoolList = () => {
   }
 
   useEffect(()=>{
-    // LoadState();
     LoadSchool();
   },[]);
   return (
@@ -39,8 +55,8 @@ const SchoolList = () => {
      <div className="container ">
     <div className='table-container'>
     <table className="table table-bordered container-fluid container my-2">
-        <thead >
-          <tr >
+        <thead>
+          <tr>
             <th>SR.NO.</th>
             <th>LOGO</th>
             <th>SCHOOL NAME</th>
@@ -63,12 +79,10 @@ const SchoolList = () => {
                 <td>{item.state}</td>
                 <td>{item.city}</td>
                 <td>{item.status}</td>
-                <td>
-                  <Link to={'/dashboard/schoolregistration/editschool'} ><h3><i className="bi bi-pencil-square" ></i></h3></Link>
-                  <Link to={''} ><h3><i className="bi bi-trash3-fill text-danger" ></i></h3></Link>
-                </td>
-
-                
+                <td className='d-flex'>
+                  <Link to={`/dashboard/schoolregistration/editschool/${item.id}`} ><h3><i className="bi bi-pencil-square ms-2 me-3 text-success" ></i></h3></Link>
+                  <h3><i onClick={(e)=>handleDelete(item.id)} className="bi bi-trash3-fill text-danger" ></i></h3>
+                </td> 
               </tr>
             ))}
 
